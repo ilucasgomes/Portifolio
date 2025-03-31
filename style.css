@@ -19,24 +19,38 @@
     padding: 0px;
     color: var(--cor2);
     font-family: Arial, Helvetica, sans-serif;
-    color: ;
 }
 
 body {
     background-color: var(--cor4);
 }
 
-.particulas {
+.container {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    overflow: hidden;
     z-index: -1;
-    opacity: 0.5;
-    background: 
-    radial-gradient(circle at 10% 20%, var(--cor2) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, var(--cor5) 0%, transparent 20%), var(--cor4);
+}
+
+.bolhas {
+    position: absolute;
+    display: flex;
+}
+
+.bolhas span {
+    width: 30px;
+    height: 30px;
+    background: #f0f8ff;
+    margin: 0px 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #f0f8ff44, 0 0 50px #f0f8ff, 0 0 100px #f0f8ffdd;
+    animation: animarBolhas calc(150s / var(--i)) linear infinite;
+}
+
+.bolhas span:nth-of-type(even) {
+    background: #0077ff48;
+    box-shadow: 0 0 0 10px #0077ff44, 0 0 50px #f0f8ff, 0 0 100px #f0f8ffdd;
 }
 
 .navegacao {
@@ -142,5 +156,14 @@ h1:hover {
     }
     50% {
         transform: translateY(-20px);
+    }
+}
+
+@keyframes animarBolhas {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
     }
 }
