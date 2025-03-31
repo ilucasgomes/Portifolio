@@ -49,7 +49,7 @@ body {
 }
 
 .bolhas span:nth-of-type(even) {
-    background: #0077ff48;
+    background: #0077ff44;
     box-shadow: 0 0 0 10px #0077ff44, 0 0 50px #f0f8ff, 0 0 100px #f0f8ffdd;
 }
 
@@ -112,16 +112,12 @@ h1 {
     color: transparent;
     margin-top: 10px;
     -webkit-text-stroke: 1px #0077ff;
-    cursor: auto;
-}
-
-h1:hover {
-    color: #0077ff;
+    text-shadow: 0 0 1px #fff;
 }
 
 .sub-titulo {
     font-size: 1.3rem;
-    color: rgb(154, 180, 203);
+    color: #dbe2e7;
 }
 
 .sobre {
